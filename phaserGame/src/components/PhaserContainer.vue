@@ -8,7 +8,6 @@
 import { ref } from 'vue'
 import { IonButton } from '@ionic/vue';
 import { launch } from '@/game/game.js';
-
 // binds to the v-if on our button to toggle visibility
 const showButton = ref(true)
 
