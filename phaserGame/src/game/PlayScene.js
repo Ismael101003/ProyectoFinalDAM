@@ -157,6 +157,14 @@ this.stars = this.physics.add.group({
     createStarLoop.destroy();
     createBombLoop.destroy();
     this.physics.pause();
+
+    
+    const gameEndEvent = new CustomEvent("gameEnded", {
+      detail: { score: this.score }
+   });
+     
+   window.dispatchEvent(gameEndEvent);
+
     this.scene.stop('PlayScene')
     this.scene.start('ScoreScene', {score: this.score});
    
