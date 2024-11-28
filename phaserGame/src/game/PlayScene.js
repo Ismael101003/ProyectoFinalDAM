@@ -157,9 +157,8 @@ this.stars = this.physics.add.group({
     createStarLoop.destroy();
     createBombLoop.destroy();
     this.physics.pause();
-    this.score= 0 ;
     this.scene.stop('PlayScene')
-    this.scene.start('ScoreScene');
+    this.scene.start('ScoreScene', {score: this.score});
    
   }, null, this);
 
