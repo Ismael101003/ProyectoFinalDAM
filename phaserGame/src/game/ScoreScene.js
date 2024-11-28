@@ -28,5 +28,9 @@ export class ScoreScene extends Scene {
             repeat: -1 // Repeat forever
         })
 
+        this.input.once('pointerdown', () => {
+            this.scene.stop('ScoreScene')
+            this.scene.start('PlayScene')
+        });
     }
   }
